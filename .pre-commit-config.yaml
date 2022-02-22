@@ -1,0 +1,10 @@
+repos:
+  # Yes this is for Javascript but it keeps our Markdown/YAML/JSON pretty too
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v2.5.1"
+    hooks:
+      - id: prettier
+  - repo: https://github.com/hadolint/hadolint
+    rev: master
+    hooks:
+      - id: hadolint-docker
