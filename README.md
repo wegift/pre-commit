@@ -25,13 +25,15 @@ pre-commit creates virtual environments for each check. To cache these between b
 ```
 pre-commit:
   stage: test
-  image: ghcr.io/wegift/pre-commit:master
+  image: ghcr.io/wegift/pre-commit:<version>
+  variables:
+    PRE_COMMIT_HOME: pre-commit-cache
   cache:
     - key:
         files:
           - pre-commit-config.yaml
       paths:
-        - /pre-commit-cache
+        - pre-commit-cache
   script:
     - pre-commit run --all-files --show-diff-on-failure
 ```
