@@ -3,7 +3,7 @@ FROM python:3.9
 # https://github.com/hadolint/hadolint/wiki/DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-ARG NODE_VERSION=16.14.0
+ARG NODE_VERSION=18.12.1
 ARG PRE_COMMIT_VERSION=v2.17.0
 ARG GO_VERSION=1.18.2
 # Install nodejs, pre-commit and make cache directory
